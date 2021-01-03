@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CSStat</string>
     <string name="textview">TextView</string>
+    <string name="page_3">PAGE 3</string>
+    <string name="page_2">PAGE 2</string>
+    <string name="page_1">PAGE 1</string>
 </resources>

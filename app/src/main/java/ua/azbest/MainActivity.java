@@ -2,9 +2,8 @@ package ua.azbest;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager2.widget.ViewPager2;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
@@ -17,8 +16,8 @@ import ua.azbest.fragments.PageFragment3;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ViewPager2 pager;
-    private RecyclerView.Adapter pagerAdapter;
+    private ViewPager pager;
+    private PagerAdapter pagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new PageFragment3());
 
         pager = findViewById(R.id.pager);
-        pagerAdapter = (RecyclerView.Adapter)new SliderPagerAdapter(getSupportFragmentManager(), list);
+        pagerAdapter = new SliderPagerAdapter(getSupportFragmentManager(), list);
 
         pager.setAdapter(pagerAdapter);
     }
